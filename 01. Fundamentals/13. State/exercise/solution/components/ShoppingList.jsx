@@ -14,11 +14,11 @@ const ShoppingList = () => {
 
     // Create a new item object
     const newItem = {
-      name,
-      quantity: parseInt(quantity),
+      name: name,
+      quantity: Number(quantity),
     };
 
-    // Update the state with the new item
+    // Update the state with the new item, helps in updating latest value , therreby using callback
     setItems((prevItems) => [...prevItems, newItem]);
 
     // Clear input fields
